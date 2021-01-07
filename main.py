@@ -100,7 +100,7 @@ def astar(maze, start, end):
                 skip = True
             
             # if adjacent is wall on maze, skip this node
-            if (maze[a_pos_y][a_pos_x] == 1):
+            if (not skip and maze[a_pos_y][a_pos_x] == 1):
                 skip = True
             
             # if valid adjacent, add to adjacent list with current node as parent
@@ -187,7 +187,7 @@ def main():
                 end = None
                 mode = 'start'
                 solving = False
-            elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and mode == '':
                 solving = True
                 path = astar(grid, start, end)
                 for i in path:
