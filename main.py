@@ -190,10 +190,11 @@ def main():
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and mode == '':
                 solving = True
                 path = astar(grid, start, end)
-                for i in path:
-                    if not (i == start or i == end):
-                        draw(PURPLE, i[0], i[1])
-                        pygame.time.delay(20)
+                if not path == None:
+                    for i in path:
+                        if not (i == start or i == end):
+                            draw(PURPLE, i[0], i[1])
+                            pygame.time.delay(20)
 
         # drawing the grid
         if not solving:
