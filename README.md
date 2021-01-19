@@ -14,5 +14,5 @@ $   python3 -m pip install -U pygame --user
 $   python3 main.py
 ```
 ### Demo
-<img src="/demo/demo1.gif" width="315" height="350"/>
+<img src="/demo/demo2.gif" width="315" height="350"/>
 
